@@ -100,7 +100,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             I am a senior at the University of Michigan double majoring in Computer Science and Psychology with a minor in Business hoping to work in multidisciplinary tech fields. 
-            Scroll to learn more about me -- it's nice to meet you!
+            Scroll to learn more about me -- it's nice to meet you! yay!!
           </motion.p>
 
           <motion.div
