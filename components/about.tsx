@@ -30,7 +30,7 @@ export function About() {
             >
               <div className="relative">
                 <motion.div
-                  className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl"
+                  className="w-64 h-96 mx-auto rounded-2xl overflow-hidden shadow-2xl"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -66,8 +66,7 @@ export function About() {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 I'm a passionate Computer Science and Psychology student at the University of Michigan, fascinated by
-                the intersection of technology and human behavior. I love creating meaningful digital experiences and
-                exploring how technology can improve people's lives.
+                the intersection of technology and human behavior. I love using technology as a tool to improve people's lives and hope to one day go into the legal field, working at the ethics of technology.
               </motion.p>
 
               <motion.p
@@ -76,9 +75,8 @@ export function About() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                When I'm not studying or coding, you can find me exploring new places, trying different cuisines,
-                reading about behavioral psychology, or working on creative projects that blend my technical and
-                artistic interests.
+                When I'm not at the UgLi grinding away, you can find me exploring new places, trying different cuisines,
+                reading a silly romance novel, or thrifting to find my latest statement piece.
               </motion.p>
 
               <motion.div
