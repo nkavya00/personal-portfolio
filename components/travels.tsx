@@ -14,8 +14,8 @@ export function Travels() {
       name: "India",
       flag: "🇮🇳",
       continent: "Asia",
-      type: "fact",
-      content: "Home sweet home - where it all began! The land of spices, colors, and incredible diversity.",
+      type: "photo",
+      content: "/images/kavya-profile.jpg",
     },
     {
       name: "USA",
@@ -30,7 +30,7 @@ export function Travels() {
       flag: "🇸🇬",
       continent: "Asia",
       type: "fact",
-      content: "Garden city with incredible street food - hawker centers are a foodie's paradise!",
+      content: "Garden city with incredible street food - hawker centers are a foodie paradise!",
     },
     {
       name: "Sri Lanka",
@@ -65,7 +65,7 @@ export function Travels() {
       flag: "🇨🇷",
       continent: "Central America",
       type: "fact",
-      content: "Pura vida and incredible biodiversity - home to 5% of the world's species!",
+      content: "Pura vida and incredible biodiversity - home to 5 percent of the worlds species!",
     },
     {
       name: "Panama",
@@ -93,21 +93,21 @@ export function Travels() {
       flag: "🇩🇪",
       continent: "Europe",
       type: "fact",
-      content: "Oktoberfest and fairy tale castles - efficiency and gemütlichkeit in perfect harmony!",
+      content: "Oktoberfest and fairy tale castles - efficiency and culture in perfect harmony!",
     },
     {
       name: "Czech Republic",
       flag: "🇨🇿",
       continent: "Europe",
       type: "fact",
-      content: "Prague's magical architecture - the city of a hundred spires and amazing beer!",
+      content: "Prague magical architecture - the city of a hundred spires and amazing beer!",
     },
     {
       name: "Austria",
       flag: "🇦🇹",
       continent: "Europe",
       type: "fact",
-      content: "Sound of Music and Alpine beauty - Mozart's birthplace and schnitzel paradise!",
+      content: "Sound of Music and Alpine beauty - Mozart birthplace and schnitzel paradise!",
     },
     {
       name: "Netherlands",
@@ -121,7 +121,7 @@ export function Travels() {
       flag: "🇭🇺",
       continent: "Europe",
       type: "fact",
-      content: "Budapest's thermal baths and ruin bars - the Paris of the East!",
+      content: "Budapest thermal baths and ruin bars - the Paris of the East!",
     },
     {
       name: "Sweden",
@@ -163,7 +163,7 @@ export function Travels() {
       flag: "🇧🇪",
       continent: "Europe",
       type: "fact",
-      content: "Waffles, chocolate, and medieval charm - home to over 1,000 different beers!",
+      content: "Waffles, chocolate, and medieval charm - home to over 1000 different beers!",
     },
     {
       name: "UAE",
@@ -191,14 +191,14 @@ export function Travels() {
       flag: "🇵🇱",
       continent: "Europe",
       type: "fact",
-      content: "Pierogi and historic Krakow - Marie Curie's homeland!",
+      content: "Pierogi and historic Krakow - Marie Curie homeland!",
     },
     {
       name: "Finland",
       flag: "🇫🇮",
       continent: "Europe",
       type: "fact",
-      content: "Saunas and Santa's homeland - more saunas than cars!",
+      content: "Saunas and Santa homeland - more saunas than cars!",
     },
     {
       name: "Estonia",
@@ -219,7 +219,7 @@ export function Travels() {
       flag: "🇱🇹",
       continent: "Europe",
       type: "fact",
-      content: "Baltic charm and amber treasures - 90% of the world's amber comes from here!",
+      content: "Baltic charm and amber treasures - 90 percent of the worlds amber comes from here!",
     },
     {
       name: "Ireland",
@@ -233,7 +233,7 @@ export function Travels() {
       flag: "🇪🇸",
       continent: "Europe",
       type: "fact",
-      content: "Flamenco, paella, and siesta culture - home to the world's oldest restaurant!",
+      content: "Flamenco, paella, and siesta culture - home to the worlds oldest restaurant!",
     },
     {
       name: "France",
@@ -368,7 +368,7 @@ export function Travels() {
                       transition={{ duration: 0.2 }}
                     >
                       <div className="bg-background/95 backdrop-blur-sm border rounded-xl p-4 shadow-xl max-w-xs">
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex items-center gap-2 mb-3">
                           <span className="text-lg">{country.flag}</span>
                           <div className="text-sm font-semibold text-foreground">{country.name}</div>
                           <div
@@ -396,11 +396,13 @@ export function Travels() {
                               <span>📸</span>
                               <span className="font-medium">Memory</span>
                             </div>
-                            <img
-                              src={country.content || "/placeholder.svg"}
-                              alt={`Memory from ${country.name}`}
-                              className="w-full h-24 object-cover rounded-lg"
-                            />
+                            <div className="w-full h-24 rounded-lg overflow-hidden">
+                              <img
+                                src={country.content || "/placeholder.svg"}
+                                alt={`Memory from ${country.name}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                           </div>
                         )}
 
