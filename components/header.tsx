@@ -2,9 +2,10 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, FileText } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
+import Link from "next/link"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,6 +15,10 @@ export function Header() {
     const element = document.getElementById(sectionId)
     element?.scrollIntoView({ behavior: "smooth" })
     setIsMenuOpen(false)
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   const navItems = [
@@ -29,9 +34,12 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-sm border-b z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
+        <button
+          onClick={scrollToTop}
+          className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+        >
           Kavya
-        </h1>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
@@ -44,6 +52,13 @@ export function Header() {
               {item.name}
             </button>
           ))}
+          <Link
+            href="/resume"
+            className="flex items-center gap-1 hover:text-orange-500 transition-colors text-sm font-medium"
+          >
+            <FileText className="h-4 w-4" />
+            Resume
+          </Link>
           <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
             <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -69,6 +84,13 @@ export function Header() {
                   {item.name}
                 </button>
               ))}
+              <Link
+                href="/resume"
+                className="flex items-center gap-1 hover:text-orange-500 transition-colors"
+              >
+                <FileText className="h-4 w-4" />
+                Resume
+              </Link>
               <div className="flex items-center justify-between pt-2 border-t">
                 <span className="text-sm text-muted-foreground">Theme</span>
                 <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>

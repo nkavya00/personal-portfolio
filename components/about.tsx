@@ -30,7 +30,7 @@ export function About() {
             >
               <div className="relative">
                 <motion.div
-                  className="w-64 h-96 mx-auto rounded-2xl overflow-hidden shadow-2xl"
+                  className="w-72 h-[28rem] mx-auto rounded-2xl overflow-hidden shadow-2xl"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -41,12 +41,12 @@ export function About() {
                   />
                 </motion.div>
                 <motion.div
-                  className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full opacity-20"
+                  className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full opacity-20"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 />
                 <motion.div
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full opacity-30"
+                  className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full opacity-30"
                   animate={{ rotate: -360 }}
                   transition={{ duration: 15, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 />
@@ -93,7 +93,7 @@ export function About() {
                         whileHover={{ x: 5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <span className="text-orange-500">🎓</span> Junior at University of Michigan
+                        <span className="text-orange-500">🎓</span> Senior at University of Michigan
                       </motion.li>
                       <motion.li
                         className="flex items-center gap-3"
@@ -107,14 +107,14 @@ export function About() {
                         whileHover={{ x: 5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <span className="text-orange-500">🌍</span> Love to Travel & Explore
+                        <span className="text-orange-500">🌍</span> Love Traveling & Fashion
                       </motion.li>
                       <motion.li
                         className="flex items-center gap-3"
                         whileHover={{ x: 5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <span className="text-pink-500">📚</span> Avid Reader & Learner
+                        <span className="text-pink-500">📚</span> Avid Reader - Give me your book recs!
                       </motion.li>
                     </ul>
                   </CardContent>
