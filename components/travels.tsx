@@ -7,7 +7,7 @@ import { useRef, useState } from "react"
 export function Travels() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const countries = [
     {
@@ -264,6 +264,27 @@ export function Travels() {
       content:
         "Vibrant souks and Sahara sunsets - where Africa meets the Mediterranean in a burst of colors and spices!",
     },
+    {
+      name: "Slovakia",
+      flag: "🇸🇰",
+      continent: "Europe",
+      type: "fact",
+      content: "Home to the highest number of castles and chateaux per capita in the world!",
+    },
+    {
+      name: "Cambodia",
+      flag: "🇰🇭",
+      continent: "Asia",
+      type: "fact",
+      content: "Home to Angkor Wat, the world's largest religious monument.",
+    },
+    {
+      name: "Thailand",
+      flag: "🇹🇭",
+      continent: "Asia",
+      type: "fact",
+      content: "Known as the 'Land of Smiles,' it's home to the world's smallest mammal, the bumblebee bat.",
+    },
   ]
 
   const continents = {
@@ -295,15 +316,15 @@ export function Travels() {
               <span className="text-6xl">🌍</span>
               <div className="text-center">
                 <p className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
-                  36 Countries
+                  39 Countries
                 </p>
                 <p className="text-sm text-muted-foreground">6 Continents</p>
               </div>
               <span className="text-6xl">✈️</span>
             </div>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-              Each pin on my map tells a story. Hover over the countries to discover the memories and fun facts I've
-              collected along the way!
+              Ever since I got the chance to study abroad this past semester, I've been obsessed with travelling as much as I can! 
+              I hope I get to talk to you about my travels -- these are all of the countries I've been to! 
             </p>
           </motion.div>
 
@@ -325,7 +346,7 @@ export function Travels() {
           </motion.div>
 
           {/* Countries Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 relative">
             {countries.map((country, index) => (
               <motion.div
                 key={country.name}
@@ -333,8 +354,8 @@ export function Travels() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                onMouseEnter={() => setHoveredCountry(country.name)}
-                onMouseLeave={() => setHoveredCountry(null)}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
                 <motion.div
                   className="relative p-4 rounded-2xl bg-background/80 backdrop-blur-sm border cursor-pointer overflow-hidden"
@@ -359,15 +380,21 @@ export function Travels() {
                   </div>
 
                   {/* Enhanced hover tooltip */}
-                  {hoveredCountry === country.name && (
+                  {hoveredIndex === index && (
                     <motion.div
-                      className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 z-20"
+                      className="absolute z-50 bottom-full"
+                      style={{
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        marginBottom: '8px',
+                        pointerEvents: 'none'
+                      }}
                       initial={{ opacity: 0, y: 10, scale: 0.9 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.9 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <div className="bg-background/95 backdrop-blur-sm border rounded-xl p-4 shadow-xl max-w-xs">
+                      <div className="bg-background/95 backdrop-blur-sm border rounded-xl p-4 shadow-2xl max-w-xs relative">
                         <div className="flex items-center gap-2 mb-3">
                           <span className="text-lg">{country.flag}</span>
                           <div className="text-sm font-semibold text-foreground">{country.name}</div>
@@ -407,7 +434,9 @@ export function Travels() {
                         )}
 
                         {/* Arrow */}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-background/95" />
+                        <div 
+                          className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-background/95" 
+                        />
                       </div>
                     </motion.div>
                   )}

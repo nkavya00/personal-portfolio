@@ -12,38 +12,38 @@ export function Passions() {
 
   const passions = [
     {
-      title: "Photography",
-      description: "Capturing moments and stories through my lens, especially during my travels and campus life.",
-      icon: <Camera className="h-8 w-8" />,
-      color: "from-orange-500 to-pink-500",
-    },
-    {
-      title: "Reading & Writing",
-      description: "Diving into psychology books, sci-fi novels, and writing about my experiences and thoughts.",
-      icon: <Book className="h-8 w-8" />,
-      color: "from-pink-500 to-orange-500",
-    },
-    {
-      title: "Music Production",
-      description: "Creating electronic music and experimenting with different sounds in my free time.",
+      title: "Teaching",
+      description: "I love to teach and mentor, and am currently an Ignite Scholar with Teach for America!",
       icon: <Music className="h-8 w-8" />,
       color: "from-orange-400 to-pink-400",
     },
     {
-      title: "Digital Art",
-      description: "Exploring digital illustration and UI design, blending creativity with technology.",
+      title: "Photography",
+      description: "Capturing moments and stories through my iconic digi cam, especially during my travels.",
+      icon: <Camera className="h-8 w-8" />,
+      color: "from-orange-500 to-pink-500",
+    },
+    {
+      title: "Armchair Psychology",
+      description: "As the only psychology major out of my friends, I love to overanalyze my group chats and diagnose fictional characters for fun.",
+      icon: <Book className="h-8 w-8" />,
+      color: "from-pink-500 to-orange-500",
+    },
+    {
+      title: "Jewelry Making",
+      description: "I''m an avid jewelry collector and maker, and love to make custom pieces for myself and others!",
       icon: <Palette className="h-8 w-8" />,
       color: "from-pink-400 to-orange-400",
     },
     {
-      title: "Open Source",
-      description: "Contributing to open source projects and building tools that help other students.",
+      title: "Fashion / Thrifting",
+      description: "I'm huge on personal style, and love to style others too!",
       icon: <Code className="h-8 w-8" />,
       color: "from-orange-600 to-pink-600",
     },
     {
-      title: "Mental Health Advocacy",
-      description: "Promoting mental health awareness on campus and supporting fellow students.",
+      title: "Hiking",
+      description: "I LOVE hike and recently climbed half dome -- ask me all about it!",
       icon: <Heart className="h-8 w-8" />,
       color: "from-pink-600 to-orange-600",
     },
