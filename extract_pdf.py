@@ -17,4 +17,4 @@ if __name__ == "__main__":
     if text:
         print(text)
     else:
-        print("Failed to extract text from PDF") 
+        print("Failed to extract text from PDF")
