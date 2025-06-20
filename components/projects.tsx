@@ -14,43 +14,39 @@ export function Projects() {
 
   const projects = [
     {
-      title: "Mental Health Tracker App",
+      title: "Notes App",
       description:
-        "A React Native app that helps students track their mental health and connect with campus resources. Built for my Psychology research project.",
-      image: "https://your-image-url.com/project1.jpg", // Replace with your project screenshot
-      technologies: ["React Native", "Firebase", "Node.js", "Psychology Research"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+        "A full-stack note-taking application with real-time collaboration features, built with modern web technologies. Features include markdown support, user authentication, and cloud synchronization.",
+      image: "/images/download.png", // Corrected image path
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Authentication"],
+      githubUrl: "https://github.com/nkavya00/notes-app",
       color: "from-orange-500 to-pink-500",
     },
     {
-      title: "Campus Event Finder",
+      title: "Finance PWA",
       description:
-        "A web platform that aggregates campus events and helps students discover activities based on their interests. Winner of UMich Hackathon 2023.",
-      image: "https://your-image-url.com/project1.jpg", // Replace with your project screenshot
-      technologies: ["React", "Express.js", "MongoDB", "Web Scraping"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+        "A progressive web app for personal finance management with offline capabilities. Tracks expenses, budgets, and financial goals with an intuitive dashboard and data visualization.",
+      image: "/images/istockphoto-1296117554-612x612.jpg", // Corrected image path
+      technologies: ["PWA", "React", "Service Workers", "Chart.js", "Local Storage"],
+      githubUrl: "https://github.com/nkavya00/finance-pwa",
       color: "from-pink-500 to-orange-500",
     },
     {
-      title: "Study Group Matcher",
+      title: "Research Scraping Tool",
       description:
-        "An algorithm that matches students for study groups based on learning styles, schedules, and course performance data.",
-      image: "https://your-image-url.com/project1.jpg", // Replace with your project screenshot
-      technologies: ["Python", "Machine Learning", "Django", "Data Analysis"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+        "An automated web scraping tool designed for academic research, collecting and analyzing data from various sources. Built for psychology research projects and data collection.",
+      image: "/images/8132413.png", // Corrected image path
+      technologies: ["Python", "Selenium", "Beautiful Soup", "Pandas", "Data Analysis"],
+      githubUrl: "https://github.com/nkavya00/research-scraping",
       color: "from-orange-400 to-pink-400",
     },
     {
-      title: "Personal Finance Dashboard",
+      title: "Attentional Focus Study",
       description:
-        "A budgeting app designed specifically for college students, with features for tracking expenses, splitting bills, and saving goals.",
-      image: "https://your-image-url.com/project1.jpg", // Replace with your project screenshot
-      technologies: ["Vue.js", "Chart.js", "Firebase", "Plaid API"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+        "A cognitive psychology experiment platform studying attentional focus and its impact on task performance. Features real-time data collection and analysis for research purposes. Basis of my honors thesis in Psychology.",
+      image: "/images/662-6625093_psychology-clipart-cognitive-psychology-cognitive-psychology-png-transparent.png", // Corrected image path
+      technologies: ["Psychopy", "Python", "JavaScript", "Psychology Research", "Data Collection", "Statistical Analysis"],
+      githubUrl: "https://github.com/nkavya00/attentional-focus",
       color: "from-pink-400 to-orange-400",
     },
   ]
@@ -65,7 +61,7 @@ export function Projects() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            My Projects
+            I code to make my life easier!
           </motion.h2>
           <motion.p
             className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"
@@ -73,8 +69,7 @@ export function Projects() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Here are some projects I've worked on during my studies, combining my interests in technology and
-            psychology.
+            These are just some of my favorite coding projects I've done to make my life a bit easier! I love using coding as a tool to automate parts of my life for my own personal learning and convenience. Check out my <a href="https://github.com/nkavya00" target="_blank" rel="noopener noreferrer" className="text-orange-500 underline hover:text-pink-500 transition-colors">Github</a> to see more projects I've worked on!
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -121,18 +116,6 @@ export function Projects() {
                     </div>
 
                     <div className="flex gap-3">
-                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button
-                          size="sm"
-                          asChild
-                          className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white border-0"
-                        >
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            View Project
-                          </a>
-                        </Button>
-                      </motion.div>
                       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Button variant="outline" size="sm" asChild className="border-2 hover:bg-muted/50">
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
