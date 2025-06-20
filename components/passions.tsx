@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart, Book, Camera, Music, Palette, Code } from "lucide-react"
+import { GraduationCap, Camera, Brain, Gem, Shirt, Mountain } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -14,7 +14,7 @@ export function Passions() {
     {
       title: "Teaching",
       description: "I love to teach and mentor, and am currently an Ignite Scholar with Teach for America!",
-      icon: <Music className="h-8 w-8" />,
+      icon: <GraduationCap className="h-8 w-8" />,
       color: "from-orange-400 to-pink-400",
     },
     {
@@ -26,25 +26,25 @@ export function Passions() {
     {
       title: "Armchair Psychology",
       description: "As the only psychology major out of my friends, I love to overanalyze my group chats and diagnose fictional characters for fun.",
-      icon: <Book className="h-8 w-8" />,
+      icon: <Brain className="h-8 w-8" />,
       color: "from-pink-500 to-orange-500",
     },
     {
       title: "Jewelry Making",
       description: "I''m an avid jewelry collector and maker, and love to make custom pieces for myself and others!",
-      icon: <Palette className="h-8 w-8" />,
+      icon: <Gem className="h-8 w-8" />,
       color: "from-pink-400 to-orange-400",
     },
     {
       title: "Fashion / Thrifting",
       description: "I'm huge on personal style, and love to style others too!",
-      icon: <Code className="h-8 w-8" />,
+      icon: <Shirt className="h-8 w-8" />,
       color: "from-orange-600 to-pink-600",
     },
     {
       title: "Hiking",
       description: "I LOVE hike and recently climbed half dome -- ask me all about it!",
-      icon: <Heart className="h-8 w-8" />,
+      icon: <Mountain className="h-8 w-8" />,
       color: "from-pink-600 to-orange-600",
     },
   ]
