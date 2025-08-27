@@ -24,9 +24,9 @@ export function Passions() {
       color: "from-orange-500 to-pink-500",
     },
     {
-      title: "Armchair Psychology",
+      title: "Dance",
       description: "I've been dancing since I was 3 years old, and am trained in a variety of forms from Bharatanatyam, to Ballet, to Jazz, Hip-Hop and more!",
-      icon: <Dance className="h-8 w-8" />,
+      icon: <Brain className="h-8 w-8" />,
       color: "from-pink-500 to-orange-500",
     },
     {
