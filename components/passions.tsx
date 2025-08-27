@@ -25,8 +25,8 @@ export function Passions() {
     },
     {
       title: "Armchair Psychology",
-      description: "As the only psychology major out of my friends, I love to overanalyze my group chats and diagnose fictional characters for fun.",
-      icon: <Brain className="h-8 w-8" />,
+      description: "I've been dancing since I was 3 years old, and am trained in a variety of forms from Bharatanatyam, to Ballet, to Jazz, Hip-Hop and more!",
+      icon: <Dance className="h-8 w-8" />,
       color: "from-pink-500 to-orange-500",
     },
     {
@@ -43,7 +43,7 @@ export function Passions() {
     },
     {
       title: "Hiking",
-      description: "I LOVE hike and recently climbed half dome -- ask me all about it!",
+      description: "I LOVE hiking and recently climbed half dome -- ask me all about it!",
       icon: <Mountain className="h-8 w-8" />,
       color: "from-pink-600 to-orange-600",
     },
