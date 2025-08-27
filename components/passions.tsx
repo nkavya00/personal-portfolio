@@ -26,7 +26,7 @@ export function Passions() {
     {
       title: "Dance",
       description: "I've been dancing since I was 3 years old, and am trained in a variety of forms from Bharatanatyam, to Ballet, to Jazz, Hip-Hop and more!",
-      icon: <Brain className="h-8 w-8" />,
+      icon: <Spotlight className="h-8 w-8" />,
       color: "from-pink-500 to-orange-500",
     },
     {
